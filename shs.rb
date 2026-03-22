@@ -5,20 +5,20 @@
 class Shs < Formula
   desc "A CLI tool that splits chained shell commands into individual commands"
   homepage "https://github.com/gurisugi/shs"
-  version "0.0.9"
+  version "0.0.10"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gurisugi/shs/releases/download/v0.0.9/shs_darwin_amd64.tar.gz"
-      sha256 "27d9b660ff6457c4061cf7e269b71d4af1aba8dee39958f6d3ecbea2c0d749f4"
+      url "https://github.com/gurisugi/shs/releases/download/v0.0.10/shs_darwin_amd64.tar.gz"
+      sha256 "9a5f0c14d63b47bcaf58c5db4382ee8e74807acb163f226a6ad7f86d17d22173"
 
       define_method(:install) do
         bin.install "shs"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gurisugi/shs/releases/download/v0.0.9/shs_darwin_arm64.tar.gz"
-      sha256 "33779fe68cfe7a84e56dad62fb788f5c68b9252c5451a00a68970d572ad619b7"
+      url "https://github.com/gurisugi/shs/releases/download/v0.0.10/shs_darwin_arm64.tar.gz"
+      sha256 "67fad4dfcccb158714b608b45f76d4dde2dc5f7badae03e9c5d3d4c311b2a336"
 
       define_method(:install) do
         bin.install "shs"
@@ -28,15 +28,15 @@ class Shs < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gurisugi/shs/releases/download/v0.0.9/shs_linux_amd64.tar.gz"
-      sha256 "9c800da3d4fed50899260cfcd849a1bf5d7c1b7628647ef4deba516334fda3d8"
+      url "https://github.com/gurisugi/shs/releases/download/v0.0.10/shs_linux_amd64.tar.gz"
+      sha256 "ed6210aa2bff06f75927755a8116a4034427e17212a9f44da13ff620b3d99fc0"
       define_method(:install) do
         bin.install "shs"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gurisugi/shs/releases/download/v0.0.9/shs_linux_arm64.tar.gz"
-      sha256 "69ab7e083d8fe12242b0688f7aa41dc5673c628a10bd3692f893c69446f7fc13"
+      url "https://github.com/gurisugi/shs/releases/download/v0.0.10/shs_linux_arm64.tar.gz"
+      sha256 "f9b20a7dfbb813ae17ccec4453175ef1f4bef3fa12d0871ad8899d2ad2cd0981"
       define_method(:install) do
         bin.install "shs"
       end
